@@ -4,6 +4,7 @@ import 'package:alert/alert.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:get/get.dart';
+import 'package:mypoll/Home_screen/home_screen_view.dart';
 import 'package:mypoll/authentication/login_screen/otp_screen_view.dart';
 
 class LoginScreenController extends GetxController {
@@ -59,6 +60,7 @@ class LoginScreenController extends GetxController {
 
       Alert(message: "successful,user UID: ${user!.uid}", shortDuration: false)
           .show();
+      Get.to(() => const HomeScreenView());
       // ignore: avoid_print
       print("User UID : ${user.uid}");
     } catch (e) {

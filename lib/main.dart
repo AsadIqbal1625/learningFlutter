@@ -1,7 +1,10 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:mypoll/authentication/login_screen/loginscreen_view.dart';
+import 'package:mypoll/Home_screen/home_screen_view.dart';
+import 'package:mypoll/authentication/authentication.dart';
+
+//import 'package:mypoll/authentication/login_screen/loginscreen_view.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -18,6 +21,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
+      color: Colors.white,
       theme: ThemeData(
         // This is the theme of your application.
         //
@@ -28,9 +32,9 @@ class MyApp extends StatelessWidget {
         // or simply save your changes to "hot reload" in a Flutter IDE).
         // Notice that the counter didn't reset back to zero; the application
         // is not restarted.
-        primarySwatch: Colors.teal,
+        primarySwatch: Colors.blue,
       ),
-      home: const LoginScreen(),
+      home: const HomeScreenView(),
     );
   }
 }
